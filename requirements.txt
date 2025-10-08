@@ -1,0 +1,5 @@
+greenlet==3.2.4
+pyembroidery==1.5.1
+PyMySQL==1.1.2
+SQLAlchemy==2.0.43
+typing_extensions==4.15.0
