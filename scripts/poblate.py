@@ -16,7 +16,7 @@ import pyembroidery as pe
 # ----------------------
 # Configuración SQLAlchemy
 # ----------------------
-engine = create_engine("mysql+pymysql://stitchapp:Stitchapp123#$@localhost:3306/PROY_STITCHAPP")
+engine = create_engine("ADD URL DATABASE")
 Session = sessionmaker(bind=engine)
 
 # ----------------------
