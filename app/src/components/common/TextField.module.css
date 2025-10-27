@@ -1,0 +1,25 @@
+/* src/components/TextField.module.css */
+
+.textField {
+    /* --- Reseteo de estilos --- */
+    border: none; /* Quitamos todos los bordes */
+    background-color: transparent; /* Quitamos el fondo blanco */
+    outline: none; /* Quitamos el borde azul al hacer clic (focus) */
+    
+    /* --- Estilos de la imagen --- */
+    border-bottom: 3px solid #333; /* Borde inferior (ajusta el color/grosor) */
+    padding-bottom: 8px; /* Espacio entre el texto y la línea */
+    height: 50px;
+    font-size: 20px;
+}
+
+/* Estilo del texto "Buscar bordado" */
+.textField::placeholder {
+    color: #333; /* Color del placeholder */
+    font-size: 20px;
+}
+
+/* (Opcional) Efecto al hacer clic en el input */
+.textField:focus {
+    border-bottom-color: #333; /* Oscurece la línea al estar activo */
+}
