@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0 # O la versión que necesites
+    environment:
+      # Variables esenciales para configurar MySQL
+      MYSQL_ROOT_PASSWORD:   # ¡Cambia esto!
+      MYSQL_DATABASE: PROY_STITCHAPP        # Nombre de la DB que se creará
+      MYSQL_USER: root              # Usuario para conectarse
+      MYSQL_PASSWORD:          # Contraseña del usuario
+    ports:
+      - "3307:3306" # Mapea el puerto del contenedor al puerto de tu host
+    volumes:
+      # 1. VOLUMEN DE DATOS: Persistencia de la DB
+      - db_data:/var/lib/mysql
+      # 2. VOLUMEN DE INICIALIZACIÓN: Carga el backup la primera vez
+      - ./backup/backup.sql:/docker-entrypoint-initdb.d/init.sql
+      # Nota: el nombre del archivo debe terminar en .sql
+    
+# Definición del volumen para que los datos persistan
+volumes:
+  db_data:
