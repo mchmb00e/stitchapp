@@ -1,0 +1,39 @@
+// Importación de fuentes desde google fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+// Variables bootstrap.
+$primary:  #778A9B;  // c4
+$secondary: #EFEAE6; // c2
+$light:     #FAF7F5; // c1
+$dark:      #212529; // c3
+
+// Fuentes bootstrap
+$font-family-sans-serif: 'Monserrat', sans-serif;
+$font-family-base: $font-family-sans-serif;
+
+// Importación de bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', sans-serif;
+}
+
+/* --- Mi animación de botón "Push" --- */
+
+.btn-push {
+    /* Esta sombra crea el borde "inferior" que da el efecto 3D */
+    box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.2);
+    /* Transición suave */
+    transition: transform;
+    will-change: transform, box-shadow; /* Optimización para el navegador */
+}
+
+.btn-push:hover {
+    /* ¡Aquí ocurre la magia! Al hacer clic (activo) */
+    
+    /* 1. Mueve el botón hacia abajo 3px */
+    transform: translateY(3px);
+    
+    /* 2. Reduce la sombra para que parezca que se "hundió" */
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);
+}
