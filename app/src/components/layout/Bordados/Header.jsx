@@ -7,7 +7,7 @@ export default function Header(props) {
 
     const { height, selectOptions } = props;
 
-    const headerClassName = `bg-light w-100 d-flex justify-content-center align-items-center shadow`;
+    const headerClassName = `bg-light w-100 d-flex justify-content-center align-items-center shadow-md position-fixed z-3`;
     const headerStyle = {
         height: height || "auto",
     };
